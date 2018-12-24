@@ -1,10 +1,4 @@
 function startFirebase(){
-    firebase.initializeApp({
-        apiKey: 'AIzaSyAGrFYgDymrWJjvtYFnbqtVgzn7OpCoxaI',
-        authDomain: 'birthdaywebsite-7743f.firebaseapp.com',
-        projectId: 'birthdaywebsite-7743f'
-    });
-
     // Initialize Cloud Firestore through Firebase
     var db = firebase.firestore();
 
