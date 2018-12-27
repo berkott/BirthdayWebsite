@@ -38,7 +38,7 @@ function checkInit(){
 
 function correctPassword(){
     $("#password-page").hide();
-    if(Date.now() >= 1545890400 && Date.now() <= 1545976800){
+    if(Date.now() >= 1545890400 || Date.now() <= 1545976800){
         $("#yay-page").show();
         $.confetti.start();
         startFirebase();

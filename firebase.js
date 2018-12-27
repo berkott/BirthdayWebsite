@@ -1,5 +1,10 @@
 function startFirebase(){
     // Initialize Cloud Firestore through Firebase
+
+    var user = firebase.auth().currentUser;
+
+    console.log(user.uid);
+
     var db = firebase.firestore();
 
     // Disable deprecated features
@@ -14,9 +19,9 @@ function startFirebase(){
             // console.log("Document data:", doc.data());
             $("#link").attr("href", doc.data()["Link"]);
         } else {
-            console.log("No such document!");
+            console.error("No such document!");
         }
     }).catch(function(error) {
-        console.log("Error getting document:", error);
+        console.error("Error getting document:", error);
     });
 }
